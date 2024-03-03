@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+body {
+    font-family: cursive;
+    background-color: lightskyblue;
+}
+
+.form-wrapper {
+    margin: 100px auto;
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form > label > input {
+    width: 250px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.add-btn {
+    width: 80px;
+    background-color: orange;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &&:hover {
+        opacity: 0.8;
+    }
+}
+
+.list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.list > li {
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-wrapper > button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn-wrapper > button:nth-child(2) {
+    background-color: teal;
+}
+
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+}
+
+.modal {
+    width: 50%;
+    height: 25%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.open-modal {
+    display: block;
+}
+
+.update-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.update-input {
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.update-wrapper > button {
+    width: 100px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.delete-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.delete-wrapper > div > button {
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-wrapper > div > button:first-child {
+    background-color: lightskyblue;
+}
+
+.delete-wrapper > h2 {
+    margin-top: 20px;
+}
+
+.complete {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.comp-wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comp-wrapper > button {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.check-wrapper {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.check-inner {
+    position: absolute;
+    inset: 2px;
+    background-color: blue;
+    border-radius: 50%;
+    display: none;
+}
+
+.check-open {
+    position: absolute;
+    inset: 2px;
+    background-color: blue;
+    border-radius: 50%;
+    display: block;
+}
